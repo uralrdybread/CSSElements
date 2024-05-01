@@ -45,8 +45,9 @@ body {
 }
 
 /* 
-sliding hover button */
+sliding left to right hover button */
 #Button2 {
+  margin-bottom: 5rem;
   text-decoration: none;
   color: #351435;
   font-family: sans-serif;
@@ -76,5 +77,56 @@ sliding hover button */
 }
 
 #Button2:hover {
+  color: white;
+}
+
+/* x and y rotating button */
+#Button3 {
+  text-decoration: none;
+  font-family: sans-serif;
+  padding: 20px 40px;
+  color: #262626;
+  font-size: 45px;
+  letter-spacing: 2px;
+  border: 5px solid #262626;
+  position: relative;
+  transition: 1s;
+}
+
+#Button3:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #262626;
+  transition: 1s;
+  transform: rotateX(90deg);
+  z-index: -1;
+}
+
+#Button3:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #262626;
+  transition: 1s;
+  transform: rotateY(90deg);
+  z-index: -1;
+}
+
+#Button3:hover:before {
+  transform: rotateX(0deg);
+}
+
+#Button3:hover:after {
+  transform: rotateY(0deg);
+}
+
+#Button3:hover {
   color: white;
 }
